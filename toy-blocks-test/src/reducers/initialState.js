@@ -27,5 +27,10 @@ const initialState = () => ({
       },
     ],
   },
+  blocks: {
+    error: null,
+    isLoading: false,
+    list: []
+  }
 });
 export default initialState;

@@ -7,12 +7,14 @@ import {
   Typography,
   AccordionDetails,
   makeStyles,
-  Box,
+  Box, Grid,
 } from "@material-ui/core";
 import colors from "../constants/colors";
 import Status from "./Status";
+import {Description} from "@material-ui/icons";
+import Blocks from "../containers/Blocks";
 
-const Node = ({ node, expanded, toggleNodeExpanded }) => {
+const Node = ({ node, expanded, toggleNodeExpanded, blocks }) => {
   const classes = useStyles();
   return (
     <Accordion
@@ -46,7 +48,7 @@ const Node = ({ node, expanded, toggleNodeExpanded }) => {
         </Box>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>Blocks go here</Typography>
+        <Blocks blocks={blocks}></Blocks>
       </AccordionDetails>
     </Accordion>
   );
